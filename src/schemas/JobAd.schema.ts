@@ -6,7 +6,7 @@ export type JobAdDocument = HydratedDocument<JobAd>;
 
 @Schema()
 export class JobAd {
-  @Prop()
+  @Prop({ required: true, unique: true })
   title: string;
   @Prop()
   description: string;
